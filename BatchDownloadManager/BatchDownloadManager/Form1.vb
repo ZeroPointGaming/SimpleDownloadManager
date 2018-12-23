@@ -10,11 +10,15 @@ Public Class Form1
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        'Move links into list box
         For Each line In TextBox1.Text.Split(vbNewLine)
             If line.ToString().Contains("http") Or line.ToString().Contains("https") Then
                 ListBox1.Items.Add(line.ToString())
             End If
         Next
+
+        'Clear out moved links from textbox
+        TextBox1.Clear()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
