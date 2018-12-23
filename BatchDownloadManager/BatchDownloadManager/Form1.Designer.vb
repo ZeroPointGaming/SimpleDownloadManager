@@ -23,14 +23,14 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.LinkListTextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.label2 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.LinkListListBox = New System.Windows.Forms.ListBox()
         Me.ClearLinkListBtn = New System.Windows.Forms.Button()
         Me.StartDownloadBtn = New System.Windows.Forms.Button()
         Me.AddLinksToListBtn = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.SaveLocationTextBox = New System.Windows.Forms.TextBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -42,13 +42,13 @@ Partial Class Form1
         Me.StopDownloadBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'LinkListTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(15, 32)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(251, 212)
-        Me.TextBox1.TabIndex = 1
+        Me.LinkListTextBox.Location = New System.Drawing.Point(15, 32)
+        Me.LinkListTextBox.Multiline = True
+        Me.LinkListTextBox.Name = "LinkListTextBox"
+        Me.LinkListTextBox.Size = New System.Drawing.Size(251, 212)
+        Me.LinkListTextBox.TabIndex = 1
         '
         'Label1
         '
@@ -68,13 +68,13 @@ Partial Class Form1
         Me.label2.TabIndex = 3
         Me.label2.Text = "Links"
         '
-        'ListBox1
+        'LinkListListBox
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(282, 32)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(907, 212)
-        Me.ListBox1.TabIndex = 4
+        Me.LinkListListBox.FormattingEnabled = True
+        Me.LinkListListBox.Location = New System.Drawing.Point(282, 32)
+        Me.LinkListListBox.Name = "LinkListListBox"
+        Me.LinkListListBox.Size = New System.Drawing.Size(907, 212)
+        Me.LinkListListBox.TabIndex = 4
         '
         'ClearLinkListBtn
         '
@@ -103,13 +103,13 @@ Partial Class Form1
         Me.AddLinksToListBtn.Text = "Add Batch"
         Me.AddLinksToListBtn.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'SaveLocationTextBox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(597, 6)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(511, 20)
-        Me.TextBox2.TabIndex = 8
-        Me.TextBox2.Text = "E:/Downloads/"
+        Me.SaveLocationTextBox.Location = New System.Drawing.Point(597, 6)
+        Me.SaveLocationTextBox.Name = "SaveLocationTextBox"
+        Me.SaveLocationTextBox.Size = New System.Drawing.Size(511, 20)
+        Me.SaveLocationTextBox.TabIndex = 8
+        Me.SaveLocationTextBox.Text = "E:/Downloads/"
         '
         'Button5
         '
@@ -204,14 +204,14 @@ Partial Class Form1
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.SaveLocationTextBox)
         Me.Controls.Add(Me.AddLinksToListBtn)
         Me.Controls.Add(Me.StartDownloadBtn)
         Me.Controls.Add(Me.ClearLinkListBtn)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.LinkListListBox)
         Me.Controls.Add(Me.label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.LinkListTextBox)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Batch Downloader"
@@ -219,14 +219,14 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents LinkListTextBox As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents label2 As Label
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents LinkListListBox As ListBox
     Friend WithEvents ClearLinkListBtn As Button
     Friend WithEvents StartDownloadBtn As Button
     Friend WithEvents AddLinksToListBtn As Button
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents SaveLocationTextBox As TextBox
     Friend WithEvents Button5 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
