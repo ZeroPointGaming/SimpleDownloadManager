@@ -1,0 +1,11 @@
+c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\bin\Debug\BatchDownloadManager.exe.config
+c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\bin\Debug\BatchDownloadManager.exe
+c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\bin\Debug\BatchDownloadManager.pdb
+c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\bin\Debug\BatchDownloadManager.xml
+c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.vbprojResolveAssemblyReference.cache
+c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.Form1.resources
+c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.Resources.resources
+c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.vbproj.GenerateResource.Cache
+c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.exe
+c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.xml
+c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.pdb
