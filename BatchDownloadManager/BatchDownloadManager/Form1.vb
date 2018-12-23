@@ -5,11 +5,7 @@ Public Class Form1
     Public DownloadLocation = "E:/Downloads"
     Dim SW As New Stopwatch
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        TextBox1.Text = ""
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles AddLinksToListBtn.Click
         'Move links into list box
         For Each line In TextBox1.Text.Split(vbNewLine)
             If line.ToString().Contains("http") Or line.ToString().Contains("https") Then
@@ -21,7 +17,7 @@ Public Class Form1
         TextBox1.Clear()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles ClearLinkListBtn.Click
         ListBox1.Items.Clear()
     End Sub
 
@@ -33,7 +29,7 @@ Public Class Form1
     Public StopDownload As Boolean = False
 
     'Download Function
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles StartDownloadBtn.Click
         SW = Stopwatch.StartNew
         WebManager = New WebClient
 
@@ -57,8 +53,8 @@ Public Class Form1
     End Sub
 
     Private Sub WebManager_DownloadProgressChanged(sender As Object, ByVal e As System.Net.DownloadProgressChangedEventArgs) Handles WebManager.DownloadProgressChanged
-        ProgressBar1.Maximum = Math.Round(e.TotalBytesToReceive / 1000000)
-        ProgressBar1.Value = Math.Round(e.BytesReceived / 1000000)
+        DownloadProgressBar.Maximum = Math.Round(e.TotalBytesToReceive / 1000000)
+        DownloadProgressBar.Value = Math.Round(e.BytesReceived / 1000000)
         DownloadProgress.Text = e.ProgressPercentage.ToString() + "%"
 
         Label5.Text = "Download Speed: " + (Math.Round(e.BytesReceived / SW.ElapsedMilliseconds / 1000, 2, MidpointRounding.AwayFromZero)).ToString + "MB/s"
@@ -75,7 +71,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles StopDownloadBtn.Click
         'Stop Download Function
         StopDownload = True
     End Sub

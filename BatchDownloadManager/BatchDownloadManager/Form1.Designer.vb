@@ -23,14 +23,13 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.label2 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.ClearLinkListBtn = New System.Windows.Forms.Button()
+        Me.StartDownloadBtn = New System.Windows.Forms.Button()
+        Me.AddLinksToListBtn = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -39,18 +38,9 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.DownloadProgress = New System.Windows.Forms.Label()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.DownloadProgressBar = New System.Windows.Forms.ProgressBar()
+        Me.StopDownloadBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(15, 250)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(81, 31)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Clear"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
@@ -86,32 +76,32 @@ Partial Class Form1
         Me.ListBox1.Size = New System.Drawing.Size(907, 212)
         Me.ListBox1.TabIndex = 4
         '
-        'Button2
+        'ClearLinkListBtn
         '
-        Me.Button2.Location = New System.Drawing.Point(282, 250)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(81, 31)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Clear"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ClearLinkListBtn.Location = New System.Drawing.Point(282, 250)
+        Me.ClearLinkListBtn.Name = "ClearLinkListBtn"
+        Me.ClearLinkListBtn.Size = New System.Drawing.Size(81, 31)
+        Me.ClearLinkListBtn.TabIndex = 5
+        Me.ClearLinkListBtn.Text = "Clear"
+        Me.ClearLinkListBtn.UseVisualStyleBackColor = True
         '
-        'Button3
+        'StartDownloadBtn
         '
-        Me.Button3.Location = New System.Drawing.Point(1108, 250)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(81, 31)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Download"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.StartDownloadBtn.Location = New System.Drawing.Point(1108, 250)
+        Me.StartDownloadBtn.Name = "StartDownloadBtn"
+        Me.StartDownloadBtn.Size = New System.Drawing.Size(81, 31)
+        Me.StartDownloadBtn.TabIndex = 6
+        Me.StartDownloadBtn.Text = "Download"
+        Me.StartDownloadBtn.UseVisualStyleBackColor = True
         '
-        'Button4
+        'AddLinksToListBtn
         '
-        Me.Button4.Location = New System.Drawing.Point(185, 250)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(81, 31)
-        Me.Button4.TabIndex = 7
-        Me.Button4.Text = "Add Batch"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.AddLinksToListBtn.Location = New System.Drawing.Point(185, 250)
+        Me.AddLinksToListBtn.Name = "AddLinksToListBtn"
+        Me.AddLinksToListBtn.Size = New System.Drawing.Size(81, 31)
+        Me.AddLinksToListBtn.TabIndex = 7
+        Me.AddLinksToListBtn.Text = "Add Batch"
+        Me.AddLinksToListBtn.UseVisualStyleBackColor = True
         '
         'TextBox2
         '
@@ -184,29 +174,29 @@ Partial Class Form1
         Me.DownloadProgress.TabIndex = 15
         Me.DownloadProgress.Text = "Progress"
         '
-        'ProgressBar1
+        'DownloadProgressBar
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(22, 382)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(1167, 40)
-        Me.ProgressBar1.TabIndex = 16
+        Me.DownloadProgressBar.Location = New System.Drawing.Point(22, 382)
+        Me.DownloadProgressBar.Name = "DownloadProgressBar"
+        Me.DownloadProgressBar.Size = New System.Drawing.Size(1167, 40)
+        Me.DownloadProgressBar.TabIndex = 16
         '
-        'Button6
+        'StopDownloadBtn
         '
-        Me.Button6.Location = New System.Drawing.Point(1095, 344)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(94, 31)
-        Me.Button6.TabIndex = 17
-        Me.Button6.Text = "Stop And Skip"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.StopDownloadBtn.Location = New System.Drawing.Point(1095, 344)
+        Me.StopDownloadBtn.Name = "StopDownloadBtn"
+        Me.StopDownloadBtn.Size = New System.Drawing.Size(94, 31)
+        Me.StopDownloadBtn.TabIndex = 17
+        Me.StopDownloadBtn.Text = "Stop Download"
+        Me.StopDownloadBtn.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1201, 433)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.ProgressBar1)
+        Me.Controls.Add(Me.StopDownloadBtn)
+        Me.Controls.Add(Me.DownloadProgressBar)
         Me.Controls.Add(Me.DownloadProgress)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -215,14 +205,13 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.AddLinksToListBtn)
+        Me.Controls.Add(Me.StartDownloadBtn)
+        Me.Controls.Add(Me.ClearLinkListBtn)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Batch Downloader"
@@ -230,15 +219,13 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Button1 As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents label2 As Label
     Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents ClearLinkListBtn As Button
+    Friend WithEvents StartDownloadBtn As Button
+    Friend WithEvents AddLinksToListBtn As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button5 As Button
     Friend WithEvents Label3 As Label
@@ -247,6 +234,6 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents DownloadProgress As Label
-    Friend WithEvents ProgressBar1 As ProgressBar
-    Friend WithEvents Button6 As Button
+    Friend WithEvents DownloadProgressBar As ProgressBar
+    Friend WithEvents StopDownloadBtn As Button
 End Class
