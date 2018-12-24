@@ -8,7 +8,7 @@ Public Class Form1
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles AddLinksToListBtn.Click
         'Move links into list box
         For Each line In LinkListTextBox.Text.Split(vbNewLine)
-            If line.ToString().Contains("http") Or line.ToString().Contains("https") Then
+            If line.ToString().Contains("http") Or line.ToString().Contains("https") Or line.ToString().Contains("www") Then
                 LinkListListBox.Items.Add(line.ToString())
             End If
         Next
@@ -33,14 +33,26 @@ Public Class Form1
         SW = Stopwatch.StartNew
         WebManager = New WebClient
 
-        For Each item In LinkListListBox.Items
+        Dim LinkList As New List(Of String)
+
+        For Each item As String In LinkListListBox.Items
+            LinkList.Add(item.ToString())
+        Next
+
+        For Each item In LinkList
             Dim strs = item.Split("/")
 
             CurrentLinkLabel.Text = item.ToString
             Label6.Text = SaveLocationTextBox.Text + strs(UBound(strs)).ToString
 
-            WebManager.DownloadFileAsync(New Uri(item), SaveLocationTextBox.Text + strs(UBound(strs)).ToString)
+            'error handling for bad uri
+            Try
+                WebManager.DownloadFileAsync(New Uri(item), SaveLocationTextBox.Text + strs(UBound(strs)).ToString)
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString)
+            End Try
 
+            'This stops the application from freezing while the webmanager is busy.
             Do While WebManager.IsBusy
                 Application.DoEvents()
 
@@ -50,6 +62,9 @@ Public Class Form1
                 End If
             Loop
         Next
+
+        'clear the linklist
+        LinkList.RemoveRange(0, LinkList.IndexOf(LinkList.Last))
     End Sub
 
     Private Sub WebManager_DownloadProgressChanged(sender As Object, ByVal e As System.Net.DownloadProgressChangedEventArgs) Handles WebManager.DownloadProgressChanged
@@ -60,8 +75,10 @@ Public Class Form1
         Label5.Text = "Download Speed: " + (Math.Round(e.BytesReceived / SW.ElapsedMilliseconds / 1000, 2, MidpointRounding.AwayFromZero)).ToString + "MB/s"
 
         If e.ProgressPercentage = 100 Then
-            'Remove link from listbox
-            LinkListListBox.Items.Remove(CurrentLinkLabel.ToString)
+            If LinkListListBox.Items.Count > 0 Then
+                LinkListListBox.SelectedIndex = 0
+                If LinkListListBox.SelectedItem.ToString = CurrentLinkLabel.Text Then LinkListListBox.Items.Remove(LinkListListBox.SelectedItem)
+            End If
 
             DownloadProgress.Text = "Completed"
             Label5.Text = "Download Speed: " + "0 MB/s"
@@ -71,6 +88,7 @@ Public Class Form1
             Label5.Text = "Download Speed: "
             CurrentLinkLabel.Text = ""
             Label6.Text = "Location: "
+            DownloadProgressBar.Value = 0
         End If
     End Sub
 

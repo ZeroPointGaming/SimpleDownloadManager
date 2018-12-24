@@ -9,3 +9,14 @@ c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchD
 c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.exe
 c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.xml
 c:\users\redaj\documents\visual studio 2017\Projects\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.pdb
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SimpleDownloadManager\BatchDownloadManager\BatchDownloadManager\bin\Debug\BatchDownloadManager.exe.config
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SimpleDownloadManager\BatchDownloadManager\BatchDownloadManager\bin\Debug\BatchDownloadManager.exe
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SimpleDownloadManager\BatchDownloadManager\BatchDownloadManager\bin\Debug\BatchDownloadManager.pdb
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SimpleDownloadManager\BatchDownloadManager\BatchDownloadManager\bin\Debug\BatchDownloadManager.xml
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SimpleDownloadManager\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.vbprojResolveAssemblyReference.cache
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SimpleDownloadManager\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.Form1.resources
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SimpleDownloadManager\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.Resources.resources
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SimpleDownloadManager\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.vbproj.GenerateResource.Cache
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SimpleDownloadManager\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.exe
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SimpleDownloadManager\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.xml
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SimpleDownloadManager\BatchDownloadManager\BatchDownloadManager\obj\Debug\BatchDownloadManager.pdb
