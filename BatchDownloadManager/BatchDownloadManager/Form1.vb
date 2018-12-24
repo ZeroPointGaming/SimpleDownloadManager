@@ -36,7 +36,7 @@ Public Class Form1
         For Each item In LinkListListBox.Items
             Dim strs = item.Split("/")
 
-            Label4.Text = "Active Download: " + item.ToString
+            CurrentLinkLabel.Text = item.ToString
             Label6.Text = SaveLocationTextBox.Text + strs(UBound(strs)).ToString
 
             WebManager.DownloadFileAsync(New Uri(item), SaveLocationTextBox.Text + strs(UBound(strs)).ToString)
@@ -60,13 +60,16 @@ Public Class Form1
         Label5.Text = "Download Speed: " + (Math.Round(e.BytesReceived / SW.ElapsedMilliseconds / 1000, 2, MidpointRounding.AwayFromZero)).ToString + "MB/s"
 
         If e.ProgressPercentage = 100 Then
+            'Remove link from listbox
+            LinkListListBox.Items.Remove(CurrentLinkLabel.ToString)
+
             DownloadProgress.Text = "Completed"
             Label5.Text = "Download Speed: " + "0 MB/s"
 
             System.Threading.Thread.Sleep(250)
             DownloadProgress.Text = ""
             Label5.Text = "Download Speed: "
-            Label4.Text = "Current Download: "
+            CurrentLinkLabel.Text = ""
             Label6.Text = "Location: "
         End If
     End Sub

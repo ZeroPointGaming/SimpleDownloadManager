@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.LinkListTextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -40,6 +41,8 @@ Partial Class Form1
         Me.DownloadProgress = New System.Windows.Forms.Label()
         Me.DownloadProgressBar = New System.Windows.Forms.ProgressBar()
         Me.StopDownloadBtn = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.CurrentLinkLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'LinkListTextBox
@@ -101,6 +104,8 @@ Partial Class Form1
         Me.AddLinksToListBtn.Size = New System.Drawing.Size(81, 31)
         Me.AddLinksToListBtn.TabIndex = 7
         Me.AddLinksToListBtn.Text = "Add Batch"
+        Me.ToolTip1.SetToolTip(Me.AddLinksToListBtn, "Add your list of links to the list box on the right hand side of the program. Eac" &
+        "h link will be downloaded in order from top to bottom at maximum speed.")
         Me.AddLinksToListBtn.UseVisualStyleBackColor = True
         '
         'SaveLocationTextBox
@@ -134,9 +139,9 @@ Partial Class Form1
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(19, 294)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(92, 13)
+        Me.Label4.Size = New System.Drawing.Size(95, 13)
         Me.Label4.TabIndex = 11
-        Me.Label4.Text = "Current Download"
+        Me.Label4.Text = "Current Download:"
         '
         'Label5
         '
@@ -190,11 +195,21 @@ Partial Class Form1
         Me.StopDownloadBtn.Text = "Stop Download"
         Me.StopDownloadBtn.UseVisualStyleBackColor = True
         '
+        'CurrentLinkLabel
+        '
+        Me.CurrentLinkLabel.AutoSize = True
+        Me.CurrentLinkLabel.Location = New System.Drawing.Point(117, 294)
+        Me.CurrentLinkLabel.Name = "CurrentLinkLabel"
+        Me.CurrentLinkLabel.Size = New System.Drawing.Size(92, 13)
+        Me.CurrentLinkLabel.TabIndex = 18
+        Me.CurrentLinkLabel.Text = "Current Download"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1201, 433)
+        Me.Controls.Add(Me.CurrentLinkLabel)
         Me.Controls.Add(Me.StopDownloadBtn)
         Me.Controls.Add(Me.DownloadProgressBar)
         Me.Controls.Add(Me.DownloadProgress)
@@ -236,4 +251,6 @@ Partial Class Form1
     Friend WithEvents DownloadProgress As Label
     Friend WithEvents DownloadProgressBar As ProgressBar
     Friend WithEvents StopDownloadBtn As Button
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents CurrentLinkLabel As Label
 End Class
